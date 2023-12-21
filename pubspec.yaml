@@ -1,0 +1,16 @@
+name: dart_cognitive_complexity
+description: A cognitive complexity linter for Dart libraries or applications.
+version: 1.0.0
+repository: https://github.com/oursky/dart_cognitive_complexity
+
+environment:
+  sdk: ^3.1.0
+
+dependencies:
+  analyzer: ">=5.12.0 <7.0.0"
+  analyzer_plugin: ^0.11.3
+  custom_lint_builder: ^0.5.7
+
+dev_dependencies:
+  lints: ^2.0.0
+  test: ^1.21.0
