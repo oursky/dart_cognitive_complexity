@@ -61,13 +61,6 @@ abstract class CognitiveComplexityVisitorBase extends UnifyingAstVisitor {
   }
 
   @override
-  visitAugmentationImportDirective(AugmentationImportDirective node) {
-    onEnterNode(node);
-    super.visitAugmentationImportDirective(node);
-    onLeaveNode(node);
-  }
-
-  @override
   visitAwaitExpression(AwaitExpression node) {
     onEnterNode(node);
     super.visitAwaitExpression(node);
@@ -253,13 +246,6 @@ abstract class CognitiveComplexityVisitorBase extends UnifyingAstVisitor {
   visitDeclaredVariablePattern(DeclaredVariablePattern node) {
     onEnterNode(node);
     super.visitDeclaredVariablePattern(node);
-    onLeaveNode(node);
-  }
-
-  @override
-  visitDefaultFormalParameter(DefaultFormalParameter node) {
-    onEnterNode(node);
-    super.visitDefaultFormalParameter(node);
     onLeaveNode(node);
   }
 
@@ -481,13 +467,6 @@ abstract class CognitiveComplexityVisitorBase extends UnifyingAstVisitor {
   }
 
   @override
-  visitFunctionTypedFormalParameter(FunctionTypedFormalParameter node) {
-    onEnterNode(node);
-    super.visitFunctionTypedFormalParameter(node);
-    onLeaveNode(node);
-  }
-
-  @override
   visitGenericFunctionType(GenericFunctionType node) {
     onEnterNode(node);
     super.visitGenericFunctionType(node);
@@ -614,23 +593,9 @@ abstract class CognitiveComplexityVisitorBase extends UnifyingAstVisitor {
   }
 
   @override
-  visitLibraryAugmentationDirective(LibraryAugmentationDirective node) {
-    onEnterNode(node);
-    super.visitLibraryAugmentationDirective(node);
-    onLeaveNode(node);
-  }
-
-  @override
   visitLibraryDirective(LibraryDirective node) {
     onEnterNode(node);
     super.visitLibraryDirective(node);
-    onLeaveNode(node);
-  }
-
-  @override
-  visitLibraryIdentifier(LibraryIdentifier node) {
-    onEnterNode(node);
-    super.visitLibraryIdentifier(node);
     onLeaveNode(node);
   }
 
@@ -705,13 +670,6 @@ abstract class CognitiveComplexityVisitorBase extends UnifyingAstVisitor {
   }
 
   @override
-  visitNamedExpression(NamedExpression node) {
-    onEnterNode(node);
-    super.visitNamedExpression(node);
-    onLeaveNode(node);
-  }
-
-  @override
   visitNamedType(NamedType node) {
     onEnterNode(node);
     super.visitNamedType(node);
@@ -757,13 +715,6 @@ abstract class CognitiveComplexityVisitorBase extends UnifyingAstVisitor {
   visitObjectPattern(ObjectPattern node) {
     onEnterNode(node);
     super.visitObjectPattern(node);
-    onLeaveNode(node);
-  }
-
-  @override
-  visitOnClause(OnClause node) {
-    onEnterNode(node);
-    super.visitOnClause(node);
     onLeaveNode(node);
   }
 
@@ -955,13 +906,6 @@ abstract class CognitiveComplexityVisitorBase extends UnifyingAstVisitor {
   visitShowCombinator(ShowCombinator node) {
     onEnterNode(node);
     super.visitShowCombinator(node);
-    onLeaveNode(node);
-  }
-
-  @override
-  visitSimpleFormalParameter(SimpleFormalParameter node) {
-    onEnterNode(node);
-    super.visitSimpleFormalParameter(node);
     onLeaveNode(node);
   }
 

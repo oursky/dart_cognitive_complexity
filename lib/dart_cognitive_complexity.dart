@@ -1,18 +1,16 @@
-import 'package:custom_lint_builder/custom_lint_builder.dart';
-import 'package:dart_cognitive_complexity/src/cognitive_complexity_lint_rule.dart';
-import 'package:dart_cognitive_complexity/src/cognitive_complexity_lint_rule_config.dart';
+import 'package:analysis_server_plugin/plugin.dart';
+import 'package:analysis_server_plugin/registry.dart';
 
-PluginBase createPlugin() => _Linter();
+import 'src/cognitive_complexity_lint_rule.dart';
 
-class _Linter extends PluginBase {
+final plugin = CognitiveComplexityPlugin();
+
+class CognitiveComplexityPlugin extends Plugin {
   @override
-  List<LintRule> getLintRules(CustomLintConfigs configs) {
-    final options = configs.rules[CognitiveComplexityLintRule.name];
+  String get name => 'dart_cognitive_complexity';
 
-    return [
-      CognitiveComplexityLintRule(
-        config: CognitiveComplexityLintRuleConfig.fromLintOptions(options),
-      ),
-    ];
+  @override
+  void register(PluginRegistry registry) {
+    registry.registerLintRule(CognitiveComplexityLintRule());
   }
 }
